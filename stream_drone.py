@@ -109,12 +109,12 @@ def infer_on_video(args):
                     bw = int(bw*width)
                     bh = int(bh*height)
                     nber_person +=1
-                    cv2.rectangle(frame, (bx, by), (bw, bh), (243, 69, 18), thickness=2)
+                    cv2.rectangle(frame, (bx, by), (bw, bh), (18, 69, 243), thickness=2)
    
             
 
         ### TODO: Send frame to the ffmpeg server
-            frame = cv2.putText(frame,'Number of people is '+str(nber_person),(400,50), cv2.FONT_HERSHEY_SIMPLEX, 1.0,(241, 214, 18),lineType=cv2.LINE_AA)
+            frame = cv2.putText(frame,'Number of people is '+str(nber_person),(400,50), cv2.FONT_HERSHEY_SIMPLEX, 1.0,(5, 162, 241),lineType=cv2.LINE_AA)
             #out.write(frame)
             
         cv2.imshow('Kea AI', frame)
